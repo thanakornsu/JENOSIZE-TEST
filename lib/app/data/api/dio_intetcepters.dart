@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-class SmartDioInterceptors extends Interceptor {
+class DioInterceptors extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     print('REQUEST[${options.method}] => PATH: ${options.path}');

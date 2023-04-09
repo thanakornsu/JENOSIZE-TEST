@@ -20,7 +20,6 @@ FoodModel _$FoodModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FoodModel {
-  String get title => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   String? get image => throw _privateConstructorUsedError;
@@ -36,7 +35,7 @@ abstract class $FoodModelCopyWith<$Res> {
   factory $FoodModelCopyWith(FoodModel value, $Res Function(FoodModel) then) =
       _$FoodModelCopyWithImpl<$Res, FoodModel>;
   @useResult
-  $Res call({String title, String? name, String? description, String? image});
+  $Res call({String? name, String? description, String? image});
 }
 
 /// @nodoc
@@ -52,16 +51,11 @@ class _$FoodModelCopyWithImpl<$Res, $Val extends FoodModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
     Object? name = freezed,
     Object? description = freezed,
     Object? image = freezed,
   }) {
     return _then(_value.copyWith(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -85,7 +79,7 @@ abstract class _$$_FoodModelCopyWith<$Res> implements $FoodModelCopyWith<$Res> {
       __$$_FoodModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String title, String? name, String? description, String? image});
+  $Res call({String? name, String? description, String? image});
 }
 
 /// @nodoc
@@ -99,16 +93,11 @@ class __$$_FoodModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
     Object? name = freezed,
     Object? description = freezed,
     Object? image = freezed,
   }) {
     return _then(_$_FoodModel(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -128,14 +117,11 @@ class __$$_FoodModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_FoodModel with DiagnosticableTreeMixin implements _FoodModel {
-  const _$_FoodModel(
-      {required this.title, this.name, this.description, this.image});
+  const _$_FoodModel({this.name, this.description, this.image});
 
   factory _$_FoodModel.fromJson(Map<String, dynamic> json) =>
       _$$_FoodModelFromJson(json);
 
-  @override
-  final String title;
   @override
   final String? name;
   @override
@@ -145,7 +131,7 @@ class _$_FoodModel with DiagnosticableTreeMixin implements _FoodModel {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'FoodModel(title: $title, name: $name, description: $description, image: $image)';
+    return 'FoodModel(name: $name, description: $description, image: $image)';
   }
 
   @override
@@ -153,7 +139,6 @@ class _$_FoodModel with DiagnosticableTreeMixin implements _FoodModel {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'FoodModel'))
-      ..add(DiagnosticsProperty('title', title))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('description', description))
       ..add(DiagnosticsProperty('image', image));
@@ -164,7 +149,6 @@ class _$_FoodModel with DiagnosticableTreeMixin implements _FoodModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FoodModel &&
-            (identical(other.title, title) || other.title == title) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -173,7 +157,7 @@ class _$_FoodModel with DiagnosticableTreeMixin implements _FoodModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, name, description, image);
+  int get hashCode => Object.hash(runtimeType, name, description, image);
 
   @JsonKey(ignore: true)
   @override
@@ -191,16 +175,13 @@ class _$_FoodModel with DiagnosticableTreeMixin implements _FoodModel {
 
 abstract class _FoodModel implements FoodModel {
   const factory _FoodModel(
-      {required final String title,
-      final String? name,
+      {final String? name,
       final String? description,
       final String? image}) = _$_FoodModel;
 
   factory _FoodModel.fromJson(Map<String, dynamic> json) =
       _$_FoodModel.fromJson;
 
-  @override
-  String get title;
   @override
   String? get name;
   @override

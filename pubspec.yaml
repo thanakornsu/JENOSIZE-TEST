@@ -38,6 +38,8 @@ dev_dependencies:
 flutter: 
   uses-material-design: true
 
+  assets:
+    - .env
 
 get_cli:
   sub_folder: false

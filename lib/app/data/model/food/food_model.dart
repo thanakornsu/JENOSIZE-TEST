@@ -7,7 +7,6 @@ part 'food_model.g.dart';
 @freezed
 class FoodModel with _$FoodModel {
   const factory FoodModel({
-    required String title,
     String? name,
     String? description,
     String? image,

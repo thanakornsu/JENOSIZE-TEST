@@ -1,12 +1,25 @@
 import 'package:app_jenosize/app/core/utils/colors.dart';
+import 'package:app_jenosize/app/core/widget/initialize_ui.dart';
 import 'package:app_jenosize/app/data/enum/log.dart';
 import 'package:app_jenosize/app/data/services/log_service.dart';
+import 'package:app_jenosize/binding.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'app/routes/app_pages.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // init ui
+  InitializeUI().init();
+
+  // init binding
+  await InitialBinding.initialize();
+
+  await dotenv.load(fileName: ".env");
+
   runApp(
     GetMaterialApp(
       theme: ThemeData(
