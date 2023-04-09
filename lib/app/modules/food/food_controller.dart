@@ -16,7 +16,6 @@ class FoodController extends GetxController with StateMixin<List<FoodModel>> {
 
   @override
   void onInit() {
-    log("2");
     fetchFoodList();
     super.onInit();
   }
