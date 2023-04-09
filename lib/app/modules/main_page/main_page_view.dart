@@ -37,7 +37,9 @@ class MainPageView extends GetView<MainPageController> {
               verticalSpaceM,
               ButtonWidget.blueShadow(
                 title: "แผนที่ บริษัท Jenosize",
-                onTap: Get.back,
+                onTap: () {
+                  Get.toNamed(Routes.MAP);
+                },
               ),
               const Spacer(),
             ],
