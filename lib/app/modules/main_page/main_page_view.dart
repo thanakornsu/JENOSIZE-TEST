@@ -1,3 +1,8 @@
+import 'package:app_jenosize/app/core/utils/colors.dart';
+import 'package:app_jenosize/app/core/utils/space.dart';
+import 'package:app_jenosize/app/core/widget/button_widget.dart';
+import 'package:app_jenosize/app/core/widget/default_button.dart';
+import 'package:app_jenosize/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -10,17 +15,35 @@ class MainPageView extends GetView<MainPageController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          children: [
-            Image.network(
-              "https://scontent.fbkk12-5.fna.fbcdn.net/v/t39.30808-6/312181686_810614620303197_1172555098388138250_n.png?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGwB2cmo_dxpxu5n2zuFjG6P0naN9OEsEk_Sdo304SwSadWjbObKhSXJGyXCDXCY-TC3RTWpRA_bYYWPLN_TDRO&_nc_ohc=Ya-Yt_hZnVsAX9wJa_m&_nc_zt=23&_nc_ht=scontent.fbkk12-5.fna&oh=00_AfBlND1uUbw9CBSoOuaNhz_WudgJGNBjybwxpWGQoqFUdw&oe=6436F4FC",
-              scale: 3,
-            ),
-            Text(
-              'MainPageView is working',
-              style: TextStyle(fontSize: 20),
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 60),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Spacer(),
+              Image.network(
+                controller.imageURlLego,
+                scale: 3,
+              ),
+              const Text(
+                'LEGO JENOSIZE',
+                style: TextStyle(fontSize: 20),
+              ),
+              const Spacer(),
+              ButtonWidget.blueShadow(
+                title: "ค้นหาร้านอาหาร",
+                onTap: () {
+                  Get.toNamed(Routes.FOOD);
+                },
+              ),
+              verticalSpaceM,
+              ButtonWidget.blueShadow(
+                title: "แผนที่ บริษัท Jenosize",
+                onTap: Get.back,
+              ),
+              const Spacer(),
+            ],
+          ),
         ),
       ),
     );
