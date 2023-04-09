@@ -23,10 +23,10 @@ void main() async {
   runApp(
     GetMaterialApp(
       theme: ThemeData(
-        primaryColor: AppColors.yellow,
+        primaryColor: AppColors.blue,
         primarySwatch: AppColors.orangeyYellow,
         appBarTheme: const AppBarTheme(
-          iconTheme: IconThemeData(color: AppColors.black),
+          iconTheme: IconThemeData(color: AppColors.white),
         ),
         dialogTheme: const DialogTheme(
           backgroundColor: AppColors.lightGray,

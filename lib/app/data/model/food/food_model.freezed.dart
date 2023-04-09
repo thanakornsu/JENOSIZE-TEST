@@ -116,8 +116,8 @@ class __$$_FoodModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FoodModel with DiagnosticableTreeMixin implements _FoodModel {
-  const _$_FoodModel({this.name, this.description, this.image});
+class _$_FoodModel extends _FoodModel with DiagnosticableTreeMixin {
+  const _$_FoodModel({this.name, this.description, this.image}) : super._();
 
   factory _$_FoodModel.fromJson(Map<String, dynamic> json) =>
       _$$_FoodModelFromJson(json);
@@ -173,11 +173,12 @@ class _$_FoodModel with DiagnosticableTreeMixin implements _FoodModel {
   }
 }
 
-abstract class _FoodModel implements FoodModel {
+abstract class _FoodModel extends FoodModel {
   const factory _FoodModel(
       {final String? name,
       final String? description,
       final String? image}) = _$_FoodModel;
+  const _FoodModel._() : super._();
 
   factory _FoodModel.fromJson(Map<String, dynamic> json) =
       _$_FoodModel.fromJson;

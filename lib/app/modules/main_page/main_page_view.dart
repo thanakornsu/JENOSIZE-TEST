@@ -1,7 +1,5 @@
-import 'package:app_jenosize/app/core/utils/colors.dart';
 import 'package:app_jenosize/app/core/utils/space.dart';
 import 'package:app_jenosize/app/core/widget/button_widget.dart';
-import 'package:app_jenosize/app/core/widget/default_button.dart';
 import 'package:app_jenosize/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
